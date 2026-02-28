@@ -1,0 +1,33 @@
+services:
+  ossn:
+    build: .
+    ports:
+      - "6050:6050"
+    volumes:
+      - ossn_data:/var/ossn_data
+      - ossn_configs:/var/www/html/configurations
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+
+  db:
+    image: mariadb:10.11
+    environment:
+      MYSQL_ROOT_PASSWORD: ossn_root_pass
+      MYSQL_DATABASE: ossn
+      MYSQL_USER: ossn
+      MYSQL_PASSWORD: ossn_pass
+    volumes:
+      - db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+volumes:
+  ossn_data:
+  ossn_configs:
+  db_data:

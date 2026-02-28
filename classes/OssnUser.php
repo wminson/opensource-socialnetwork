@@ -22,7 +22,7 @@ class OssnUser extends OssnEntities {
 						$this->sendactiviation = false;
 				}
 				if(!isset($this->validated)) {
-						$this->validated = false;
+						$this->validated = true;
 				}
 				$this->data = new stdClass();
 		}

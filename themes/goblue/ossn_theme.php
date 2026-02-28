@@ -91,32 +91,32 @@ function ossn_goblue_head() {
 		$head = array();
 
 		$head[] = ossn_html_css(array(
-				'href' => '//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css',
+				'href' => ossn_site_url('vendors/fontawesome/css/all.min.css'),
 		));
 		$head[] = ossn_html_css(array(
-				'href' => 'https://fonts.googleapis.com/css?family=PT+Sans:400italic,700,400',
+				'href' => '',
 		));
 		$head[] = ossn_html_js(array(
 				'src' => ossn_theme_url() . 'vendors/bootstrap/js/bootstrap.min.js?v5.3',
 		));
 		$head[] = ossn_html_css(array(
-				'href' => '//code.jquery.com/ui/1.14.1/themes/smoothness/jquery-ui.css',
+				'href' => ossn_site_url('vendors/jquery-ui/jquery-ui.css'),
 		));
 		return implode('', $head);
 }
 function ossn_goblue_admin_head() {
 		$head   = array();
 		$head[] = ossn_html_css(array(
-				'href' => '//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css',
+				'href' => ossn_site_url('vendors/fontawesome/css/all.min.css'),
 		));
 		$head[] = ossn_html_css(array(
-				'href' => '//fonts.googleapis.com/css?family=Roboto+Slab:300,700,400',
+				'href' => '',
 		));
 		$head[] = ossn_html_js(array(
 				'src' => ossn_theme_url() . 'vendors/bootstrap/js/bootstrap.min.js?v5.3',
 		));
 		$head[] = ossn_html_css(array(
-				'href' => '//code.jquery.com/ui/1.14.1/themes/smoothness/jquery-ui.css',
+				'href' => ossn_site_url('vendors/jquery-ui/jquery-ui.css'),
 		));
 		return implode('', $head);
 }

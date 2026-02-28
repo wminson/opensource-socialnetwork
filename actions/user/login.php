@@ -31,11 +31,6 @@ if(strpos($username, '@') !== false) {
 		$username = $user->username;
 }
 
-if($user && !$user->isUserVALIDATED()) {
-		$user->resendValidationEmail();
-		ossn_trigger_message(ossn_print('ossn:user:validation:resend'), 'error');
-		redirect(REF);
-}
 $vars = array(
 		'user' => $user,
 );

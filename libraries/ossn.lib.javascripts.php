@@ -45,7 +45,7 @@ function ossn_javascript() {
 		ossn_new_external_js('jquery-3.7.1.min.js', 'vendors/jquery/jquery-3.7.1.min.js');
 
 		ossn_new_external_js('tinymce.min', 'vendors/tinymce/tinymce.min.js');
-		ossn_new_external_js('jquery-ui.min.js', '//ajax.googleapis.com/ajax/libs/jqueryui/1.14.1/jquery-ui.min.js', false);
+		ossn_new_external_js('jquery-ui.min.js', 'vendors/jquery-ui/jquery-ui.min.js');
 
 		ossn_load_external_js('jquery-3.7.1.min.js');
 		ossn_load_external_js('jquery-3.7.1.min.js', 'admin');
@@ -61,8 +61,8 @@ function ossn_javascript() {
 				ossn_load_external_js('jquery-arhandler-1.1-min.js');
 		}
 		//[E] Add fancybox into core as external lib #2234
-		ossn_new_external_js('jquery.fancybox.min.js', '//cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js', false);
-		ossn_new_external_css('jquery.fancybox.min.css', '//cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css', false);	
+		ossn_new_external_js('jquery.fancybox.min.js', 'vendors/fancybox/jquery.fancybox.min.js');
+		ossn_new_external_css('jquery.fancybox.min.css', 'vendors/fancybox/jquery.fancybox.min.css');	
 }
 
 /**
