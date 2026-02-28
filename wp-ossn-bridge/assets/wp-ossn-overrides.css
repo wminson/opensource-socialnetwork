@@ -1,0 +1,62 @@
+/**
+ * WP-OSSN Bridge: CSS overrides to resolve conflicts between
+ * the WP theme and OSSN's styles (both use Bootstrap 5).
+ *
+ * All OSSN content is wrapped in #ossn-wrapper, which we use
+ * to scope overrides and prevent style bleed.
+ */
+
+/* Ensure OSSN wrapper takes full content width */
+#ossn-wrapper {
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+}
+
+/* Prevent WP theme container from constraining OSSN layout */
+#ossn-wrapper .opensource-socalnetwork {
+    max-width: none;
+}
+
+/* Fix z-index conflicts between WP nav and OSSN topbar/sidebar */
+#ossn-wrapper .ossn-page-container {
+    position: relative;
+    z-index: 1;
+}
+
+#ossn-wrapper .ossn-halt {
+    z-index: 1050;
+}
+
+#ossn-wrapper .ossn-message-box {
+    z-index: 1060;
+}
+
+/* Ensure OSSN modals/overlays appear above WP elements */
+#ossn-wrapper .ossn-viewer {
+    z-index: 1070;
+}
+
+/* Hide OSSN's loading animation if it conflicts with WP */
+#ossn-wrapper .ossn-page-loading-annimation {
+    z-index: 1080;
+}
+
+/* Scope Bootstrap button resets to avoid WP admin bar conflicts */
+#ossn-wrapper .btn {
+    line-height: inherit;
+}
+
+/* Prevent WP's default link color from overriding OSSN links */
+#ossn-wrapper a {
+    text-decoration: none;
+}
+
+/* Ensure OSSN forms aren't affected by WP theme form styles */
+#ossn-wrapper input[type="text"],
+#ossn-wrapper input[type="email"],
+#ossn-wrapper input[type="password"],
+#ossn-wrapper textarea,
+#ossn-wrapper select {
+    box-sizing: border-box;
+}
